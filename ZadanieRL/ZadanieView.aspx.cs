@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Telerik.Web.UI;
 using ZadanieRL.Model;
 
 namespace ZadanieRL
@@ -61,25 +62,17 @@ namespace ZadanieRL
             {
                 try
                 {
-                    var query = context.Categories.Where(x => x.CategoryName == cbxCategoryOfNewProduct.SelectedItem.Text).Select(s => s.CategoryId).Single();
+                    var query = context.Categories.Where(x => x.CategoryName == cbxCategoryOfNewProduct.SelectedItem.Text).
+                        Select(s => s.CategoryId).Single();
                     Category category = new Category();
                     category.CategoryId = (int)query;
                     category.CategoryName = cbxCategoryOfNewProduct.SelectedItem.Text;
-
                     Product product = new Product();
                     product.ProductName = txbNewProductName.Text;
-                    //product.Categories.Add(category);
-
                     category.Products.Add(product);
                     product.Categories.Add(category);
-
-
-
                     context.Products.Attach(product);
                     context.Products.Add(product);
-                    //context.Categories.Add(category);
-                    //context.Products.Add(product);
-
                     context.SaveChanges();
                     RadGrid1.DataBind();
                 }
@@ -88,22 +81,29 @@ namespace ZadanieRL
 
                 }
             }
+        }
 
-            //protected void Button1_Click(object sender, EventArgs e)
-            //{
-            //    using(DataContext context = new DataContext())
-            //    {
-            //        Product x = new Product();
-            //        Category c = new Category();
-            //        c.CategoryName = "AGD";
-            //        x.ProductName = "Lococo";
+        protected void RadGrid1_ItemCommand(object sender, Telerik.Web.UI.GridCommandEventArgs e)
+        {
+            if (e.CommandName == "Delete")
+            {
+                GridDataItem item = (GridDataItem)e.Item;
+                int strtxt = Convert.ToInt32(item["ProductId"].Text); 
+                using(DataContext context= new DataContext())
+                {
+                    try
+                    {
+                        var query = context.Products.Where(x => x.ProductId == strtxt).Single();
+                        context.Products.Remove(query);
+                        context.SaveChanges();
+                        RadGrid1.DataBind();
+                    }
+                    catch
+                    {
 
-            //        c.Products.Add(x);
-            //        context.Products.Add(x);
-            //        context.Categories.Add(c);
-            //        context.SaveChanges();
-            //    }
-            //}
+                    }
+                }
+            }
         }
     }
 }

@@ -80,4 +80,3 @@ C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.csproj.Gen
 C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.dll.licenses
 C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.dll
 C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.pdb
-C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.csprojResolveAssemblyReference.cache
