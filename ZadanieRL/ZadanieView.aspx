@@ -10,15 +10,23 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:scriptmanager runat="server"></asp:scriptmanager>
+        <asp:scriptmanager runat="server" />
+        <telerik:RadListBox ID="RadListBox1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="RadListBox1_SelectedIndexChanged" />
 
-        <telerik:RadListBox ID="RadListBox1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="RadListBox1_SelectedIndexChanged"></telerik:RadListBox>
         <div>
-                <telerik:RadGrid ID="RadGrid1" runat="server"></telerik:RadGrid>
+                <telerik:RadGrid ID="RadGrid1" runat="server" />     
         </div>
-        <telerik:RadDataForm ID="RadDataForm1" runat="server"></telerik:RadDataForm>
+        
+        <div>
+                <telerik:RadDataForm ID="RadDataForm1" runat="server" />
+        </div>
 
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+                <telerik:RadLabel ID="lblAddNewProduct" Text="Add new product" runat="server" />
+                <telerik:RadTextBox ID="txbNewProductName" runat="server" />
+                <telerik:RadComboBox ID="cbxCategoryOfNewProduct" runat="server"/>
+                <telerik:RadButton ID="btnRadButtonAddNewProduct" runat="server" OnClick="btnRadButtonAddNewProduct_Click" Text="Ok" />
+                <telerik:RadLabel ID="RadLabel1" Text="Add new product" Visible="false"  runat="server" />
+        
     </form>
 </body>
 </html>

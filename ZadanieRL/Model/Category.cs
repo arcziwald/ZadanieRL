@@ -24,6 +24,7 @@ namespace ZadanieRL.Model
 
         [Column("NazwaKategorii")]
         [DisplayName("Nazwa Kategorii")]
+        [StringLength(300)]
         [Index(IsUnique=true)]
         public string CategoryName { get; set; }
 

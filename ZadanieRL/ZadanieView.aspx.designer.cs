@@ -49,12 +49,48 @@ namespace ZadanieRL {
         protected global::Telerik.Web.UI.RadDataForm RadDataForm1;
         
         /// <summary>
-        /// Button1 control.
+        /// lblAddNewProduct control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::Telerik.Web.UI.RadLabel lblAddNewProduct;
+        
+        /// <summary>
+        /// txbNewProductName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadTextBox txbNewProductName;
+        
+        /// <summary>
+        /// cbxCategoryOfNewProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadComboBox cbxCategoryOfNewProduct;
+        
+        /// <summary>
+        /// btnRadButtonAddNewProduct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadButton btnRadButtonAddNewProduct;
+        
+        /// <summary>
+        /// RadLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel1;
     }
 }

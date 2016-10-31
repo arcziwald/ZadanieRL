@@ -316,9 +316,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610252134096_ZadanieRLMigration.cs" />
-    <Compile Include="Migrations\201610252134096_ZadanieRLMigration.Designer.cs">
-      <DependentUpon>201610252134096_ZadanieRLMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201610300013354_MigZadRL.cs" />
+    <Compile Include="Migrations\201610300013354_MigZadRL.Designer.cs">
+      <DependentUpon>201610300013354_MigZadRL.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Category.cs" />
@@ -363,8 +363,8 @@
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610252134096_ZadanieRLMigration.resx">
-      <DependentUpon>201610252134096_ZadanieRLMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610300013354_MigZadRL.resx">
+      <DependentUpon>201610300013354_MigZadRL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
