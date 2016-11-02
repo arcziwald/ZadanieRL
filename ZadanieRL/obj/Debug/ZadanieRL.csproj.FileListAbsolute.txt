@@ -39,6 +39,9 @@ C:\Users\Artur\Desktop\RedLinkX\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.csproj.G
 C:\Users\Artur\Desktop\RedLinkX\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.dll.licenses
 C:\Users\Artur\Desktop\RedLinkX\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.dll
 C:\Users\Artur\Desktop\RedLinkX\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.pdb
+C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.Migrations.MigZadRL.resources
+C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.csproj.GenerateResource.Cache
+C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.dll.licenses
 C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\bin\ZadanieRL.dll.config
 C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\bin\ZadanieRL.dll
 C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\bin\ZadanieRL.pdb
@@ -75,8 +78,5 @@ C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\bin\DotNetOpenAuth.AspNet.xml
 C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\bin\Microsoft.AspNet.Membership.OpenAuth.xml
 C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\bin\Telerik.Web.UI.xml
 C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.Migrations.MigZadRL.resources
-C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.csproj.GenerateResource.Cache
-C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.dll.licenses
 C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.dll
 C:\Users\Artur\Desktop\RL old\ZadanieRL\ZadanieRL\obj\Debug\ZadanieRL.pdb

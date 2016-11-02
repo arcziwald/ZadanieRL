@@ -40,24 +40,6 @@ namespace ZadanieRL {
         protected global::Telerik.Web.UI.RadGrid RadGrid1;
         
         /// <summary>
-        /// IdBoundColumnItem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.GridBoundColumn IdBoundColumnItem;
-        
-        /// <summary>
-        /// RadDataForm1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadDataForm RadDataForm1;
-        
-        /// <summary>
         /// lblAddNewProduct control.
         /// </summary>
         /// <remarks>
@@ -76,13 +58,13 @@ namespace ZadanieRL {
         protected global::Telerik.Web.UI.RadTextBox txbNewProductName;
         
         /// <summary>
-        /// cbxCategoryOfNewProduct control.
+        /// RadComboBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox cbxCategoryOfNewProduct;
+        protected global::Telerik.Web.UI.RadComboBox RadComboBox1;
         
         /// <summary>
         /// btnRadButtonAddNewProduct control.

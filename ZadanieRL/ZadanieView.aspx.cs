@@ -11,62 +11,33 @@ namespace ZadanieRL
 {
     public partial class ZadanieView : System.Web.UI.Page
     {
-        static bool _isRequested;
-        public bool IsRequested
-        {
-            get
-            {
-                return _isRequested;
-            }
-            set
-            {
-                _isRequested = value;
-            }
-        }
+        DataBaseHelpers DataBaseHelper;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsRequested == false)
+            if (DataBaseHelper == null)
             {
-                using (DataContext context = new DataContext())
-                {
-                    var query = from b in context.Products
-                                select new { b.ProductId, b.ProductName };
-
-                    RadGrid1.DataSource = query.ToList();
-                    RadDataForm1.DataSource = query.ToList();
-
-                    foreach (var cat in context.Categories)
-                    {
-                        RadListBox1.Items.Add(cat.CategoryName);
-                        cbxCategoryOfNewProduct.Items.Add(cat.CategoryName);
-                    }
-                }
-                IsRequested = true;
+                DataBaseHelper = new DataBaseHelpers();
             }
+            DataBaseHelper.LoadDataForAllUI(ref RadGrid1, ref RadListBox1, ref RadComboBox1);
         }
 
         protected void RadListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (DataContext context = new DataContext())
-            {
-                var querySelectedCategoryId = context.Categories.Where(x => x.CategoryName == RadListBox1.SelectedItem.Text).Select(y => y.CategoryId).Single();
-                var products = context.Products.Where(s => s.Categories.Any(p => p.CategoryId == querySelectedCategoryId));
-                RadGrid1.DataSource = products.ToList();
-                RadGrid1.DataBind();
-            }
+            DataBaseHelper.LoadRadGridOnSelectedCategory(ref RadGrid1, ref RadListBox1);
         }
 
-        protected void btnRadButtonAddNewProduct_Click(object sender, EventArgs e)
+        public void btnRadButtonAddNewProduct_Click(object sender, EventArgs e)
         {
             using (DataContext context = new DataContext())
             {
                 try
                 {
-                    var query = context.Categories.Where(x => x.CategoryName == cbxCategoryOfNewProduct.SelectedItem.Text).
+                    var query = context.Categories.Where(x => x.CategoryName == RadComboBox1.SelectedItem.Text).
                         Select(s => s.CategoryId).Single();
                     Category category = new Category();
                     category.CategoryId = (int)query;
-                    category.CategoryName = cbxCategoryOfNewProduct.SelectedItem.Text;
+                    category.CategoryName = RadComboBox1.SelectedItem.Text;
                     Product product = new Product();
                     product.ProductName = txbNewProductName.Text;
                     category.Products.Add(product);
@@ -74,7 +45,8 @@ namespace ZadanieRL
                     context.Products.Attach(product);
                     context.Products.Add(product);
                     context.SaveChanges();
-                    RadGrid1.DataBind();
+                    DataBaseHelper.LoadRadGridOnSelectedCategory(ref RadGrid1, ref RadListBox1);
+
                 }
                 catch
                 {
@@ -88,7 +60,7 @@ namespace ZadanieRL
             if (e.CommandName == "Delete")
             {
                 GridDataItem item = (GridDataItem)e.Item;
-                int strtxt = Convert.ToInt32(item["ProductId"].Text); 
+                int strtxt = Convert.ToInt16(item["ProductId"].Text); 
                 using(DataContext context= new DataContext())
                 {
                     try
@@ -96,13 +68,14 @@ namespace ZadanieRL
                         var query = context.Products.Where(x => x.ProductId == strtxt).Single();
                         context.Products.Remove(query);
                         context.SaveChanges();
-                        RadGrid1.DataBind();
                     }
                     catch
                     {
 
                     }
                 }
+                DataBaseHelper.LoadRadGridOnSelectedCategory(ref RadGrid1, ref RadListBox1);
+                RadGrid1.DataBind();
             }
         }
     }
